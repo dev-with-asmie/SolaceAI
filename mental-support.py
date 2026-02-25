@@ -19,7 +19,7 @@ def generate_response(user_input):
 
     completion = client.chat.completions.create(
         model="llama-3.1-8b-instant",
-        
+
         messages=st.session_state['conversation_history']
     )
 
@@ -36,7 +36,7 @@ def generate_response(user_input):
 
 def generate_affirmation():
     completion = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[{
             "role": "user",
             "content": "Provide a positive affirmation to encourage someone who is feeling stressed."
@@ -50,7 +50,7 @@ def generate_affirmation():
 
 def generate_meditation_guide():
     completion = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[{
             "role": "user",
             "content": "Provide a 5-minute guided meditation script to help someone relax."
